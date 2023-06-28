@@ -19,13 +19,14 @@
 
         <div class="row">
             <div class="col-sm-5 mb-3 mb-sm-0">
-                <form id="formulario_de_registro_ppto">
+                <form id="formularioRegistro">
 
                     <div class="card mb-3">
                         <div class="card-body" style="background-color: rgb(219, 244, 234);" borderer="#00C9A7;">
-                            <h6 class="card-title">Ingresa Tu Presupuesto</h6>
+                            <label class="card-title fw-bold" for="ingresoMontoPresupuesto">Ingresa Tu
+                                Presupuesto</label>
                             <div>
-                                <input id="nameExpense" name="nameExpense"
+                                <input id="ingresoMontoPresupuesto" name="ingresoMontoPresupuesto"
                                     class="form-control bg-success-subtle border-secondary border-opacity-50"
                                     type="numero" min="0" required>
                             </div>
@@ -44,18 +45,18 @@
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-gap-1 text-center text-md-start">
 
                     <div class="col">
-                        <h6 class="text-uppercase mb-1">presupuesto</h6>
-                        <p id="outputBudget" class="fw-bold" data-value="0">$0</p>
+                        <label class="text-uppercase mb-1">presupuesto</label>
+                        <p id="mostrarPresupuesto" class="fw-bold" data-value="0">$0</p>
                     </div>
 
                     <div class="col">
-                        <h6 class="text-uppercase mb-1">gastos</h6>
-                        <p id="outputExpense" class="fw-bold">$0</p>
+                        <label class="text-uppercase mb-1">gastos</label>
+                        <p id="mostrarGasto" class="fw-bold">$0</p>
                     </div>
 
                     <div class="col">
-                        <h6 class="text-uppercase mb-1">saldo</h6>
-                        <p id="balance" class="fw-bold">$0</p>
+                        <label class="text-uppercase mb-1">saldo</label>
+                        <p id="mostrarSaldo" class="fw-bold">$0</p>
                     </div>
                 </div>
             </section>
@@ -69,8 +70,9 @@
                     <div class="card-body" style="background-color: rgb(239, 210, 208);">
 
                         <div class="mb-3">
-                            <h6 class="card-title">Ingresa El Nombre Del Gasto</h6>
-                            <input id="nameExpense2" name="nameExpense2"
+                            <label class="card-title fw-bold" for="ingresoNombreGasto">Ingresa El Nombre Del
+                                Gasto</label>
+                            <input id="ingresoNombreGasto" name="ingresoNombreGasto"
                                 class="form-control bg-danger-subtle border-secondary border-opacity-50" type="text"
                                 required>
                         </div>
@@ -80,14 +82,15 @@
 
 
                         <div class="mb-3">
-                            <h6 class="card-title">Ingresa La Cantidad Del Gasto</h6>
-                            <input id="nameExpense3" name="nameExpense3"
+                            <label class="card-title fw-bold" for="ingresoMontoGasto">Ingresa La Cantidad Del
+                                Gasto</label>
+                            <input id="ingresoMontoGasto" name="ingresoMontoGasto"
                                 class="form-control bg-danger-subtle border-secondary border-opacity-50" type="numero"
                                 min="0" required>
 
                         </div>
                         <br>
-                        <button type="button" class="btn btn-danger">Añadir Gasto</button>
+                        <button type="button" id="botonGasto" class="btn btn-danger">Añadir Gasto</button>
                     </div>
                 </div>
             </div>
@@ -102,13 +105,8 @@
                         </tr>
 
                     </thead>
-                    <tbody>
-                        <tr>
+                    <tbody id="mostrarListaGastos">
 
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
 
                     </tbody>
                 </table>
@@ -122,10 +120,9 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/750c2417f3.js" crossorigin="anonymous"></script>
 
-    <script
-        type = "module"
-        src = "./assets/js/main.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
     <br>
 </body>
 
